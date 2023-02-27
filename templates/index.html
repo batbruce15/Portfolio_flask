@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <meta name="description" content="Portfolio de Battou Karim">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+       <style>
+          body {
+            height: 100%;
+            background-image: url('static/img/photo2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+          }
+        </style>
+  </head>
+
+  <body>
+    <div id="bg"></div>
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#perinfo">Personal Information</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+       <section id="perinfo" >
+        <div class="photo">
+          <img src="{{ url_for('static', filename='img/photo.jpg') }}" alt="Photo 1">
+        </div>
+        <h2>Personal Information</h2>
+        <!-- Add your personal information here -->
+        <p> <strong>Full name: </strong> Battou Karim </p>
+        <p> <strong>Adresse: </strong> Cité Merdjachakir Bt 15 Medea </p>
+        <p> <strong>Phone number: </strong>(+213) 793-63-69-40</p>
+        <p><strong>Email :</strong> karim.battou20@gmail.com </p>
+      </section>
+      <section id="about">
+        <h2>About</h2>
+        <p id="paragraph">
+          As a computer science graduate with a Master 2 level specialization in System Engineering and Web Technology, I have a strong foundation in programming, machine learning, and web development. My academic background has equipped me with the technical skills and knowledge necessary to solve complex programming problems and develop high-quality web applications.
+
+          Throughout my studies, I gained hands-on experience building a variety of projects, from simple web pages to complex machine learning models. I am proficient in several programming languages, including Python, JavaScript, and Java, and I have a deep understanding of software development best practices and methodologies.
+
+          I am confident in my ability to contribute to projects and bring value to any organization that I work with. My passion for technology, combined with my education and experience, makes me a strong candidate for a career in the tech industry. I look forward to leveraging my skills and knowledge to create innovative and impactful solutions for my future clients and employers.
+        </p>
+
+        <button id="toggleButton">Toggle Paragraph</button>
+
+        <style>
+          #paragraph {
+            margin-bottom: 20px;
+          }
+          #toggleButton {
+              background-color: #333;
+              color: white;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+        </style>
+
+        <script>
+          const paragraph = document.getElementById("paragraph");
+          const toggleButton = document.getElementById("toggleButton");
+
+          toggleButton.addEventListener("click", function() {
+            if (paragraph.style.display === "none") {
+              paragraph.style.display = "block";
+            } else {
+              paragraph.style.display = "none";
+            }
+          });
+        </script>
+
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <h3>Project Name 1</h3>
+            <p>Project Description 1</p>
+            <a href="#">Learn More</a>
+          </li>
+          <li>
+            <h3>Project Name 2</h3>
+            <p>Project Description 2</p>
+            <a href="#">Learn More</a>
+          </li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>Contact Information</h2>
+        <p>You can find me on:</p>
+        <ul>
+          <li><a href="https://www.facebook.com/yourusername">Facebook</a></li>
+          <li><a href="https://github.com/yourusername">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/yourusername">LinkedIn</a></li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+        <script type="text/javascript">
+          document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Thank you for your message!");
+      });
+  </script>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2023 My Portfolio</p>
+    </footer>
+  </body>
+</html>
